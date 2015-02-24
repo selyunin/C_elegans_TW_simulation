@@ -141,11 +141,11 @@ int main(int argc, char *argv[])
 				w_gap_temp[j] = (double) (W_GAP[i][j]);
 				I_gap_step += G_GAP*w_gap_temp[j]*(V_sim_step_nif[j] - V_sim_step_nif[i]);
 				g_step[j] = 0;
-				for(int k=0; k<100*W_SYN[i][j]; k++){
+				for(int k=0; k<NUM_CHANNELS*W_SYN[i][j]; k++){
 					if (nif( V_sim_step_nif[j] , "<=", V_eq[j], -K/V_RANGE/1e4, &generator)){
 						g_branch = 0;
 					} else{
-						g_branch = G_SYN/100.;
+						g_branch = G_SYN/NUM_CHANNELS;
 					}
 					g_step[j] += g_branch;
 				}

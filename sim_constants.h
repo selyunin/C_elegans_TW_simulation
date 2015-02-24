@@ -16,6 +16,7 @@
 #define SIM_STEPS		(int)(SIM_DURATION/DT)
 #define START_IDX		(int)(START_TIME/DT)
 #define END_IDX			(int)((START_TIME + PULSE_DURATION)/DT)
+#define NUM_CHANNELS	(1)
 
 #define	STIM_IDX		1
 
